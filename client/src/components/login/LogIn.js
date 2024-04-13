@@ -56,7 +56,7 @@ function LogIn() {
             <div>
               <div className='form-check mt-4'>
                 <input type='radio' className='form-check-input' id='farmer' value="farmer" {...register("Type",{required:true})}/>
-                <label htmlFor='farmer' className='form-check-label mb-3'>Farmer</label>
+                <label htmlFor='store' className='form-check-label mb-3'>Store</label>
               </div>
               <div className='form-check'>
                 <input type='radio' className='form-check-input' id='customer' value="customer" {...register("Type",{required:true})}/>

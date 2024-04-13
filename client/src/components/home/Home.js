@@ -7,60 +7,60 @@ import {BiSolidMegaphone} from 'react-icons/bi'
 function Home() {
   return (
     <div>
-      <h1 className='text-danger text-center mt-5 container'>Welcome to Fresh'O Farm Portal</h1>
-      <p className='text-center mb-2'>Eat Fresh Live Healthy...</p>
+      <h1 className='text-danger text-center mt-8 container'>From Cart to Kitchen</h1>
+      <p className='text-center mb-4'>With just a Click...</p>
       <Marquee className='mb-3' speed={75} pauseOnClick style={{fontWeight:'bolder',fontSize:'18px'}}>
-        <BiSolidMegaphone className='fs-3 me-2 text-success opacity-75 announcement'/>Our Website doesn't include in any mis-communications between Customer and Farmer
+        <BiSolidMegaphone className='fs-3 me-2 text-success opacity-75 announcement'/>Welcome to Fresh'O Farm Portal...Our Website doesn't include in any mis-communications between Customer and Provider
       </Marquee>
       <Carousel className='container myCarousel mb-5'>
       <Carousel.Item>
         <img
           className='d-block m-auto rounded'
-          src='https://housing.com/news/wp-content/uploads/2022/10/SOWING-FEATURE-compressed.jpg'
+          src='https://midwestcommunity.org/wp-content/uploads/2018/02/Groceries-ThinkstockPhotos-836782690.jpg'
           alt="Image Not Found"
         />
         <Carousel.Caption>
-          <h3>Sowing</h3>
+          <h3></h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className='d-block m-auto rounded'
-          src="https://i.ytimg.com/vi/gzVy9NEaXlU/maxresdefault.jpg"
+          src="https://mainlymiles.com/wp-content/uploads/2018/08/groceries-background-e1533097069889.jpg"
           alt="Image Not Found"
         />
         <Carousel.Caption>
-          <h3>Cultivation</h3>
+          <h3></h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className='d-block m-auto rounded'
-          src="https://www.chefsbest.com/wp-content/uploads/2016/08/Pesticides-Pros-Cons-2.jpg"
+          src="http://bigbasketclone.yolasite.com/resources/grocery%20online%20shopping.jpg"
           alt="Image Not Found"
         />
         <Carousel.Caption>
-          <h3>Organic Pesticide Spray</h3>
+          <h3></h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
         className='d-block m-auto rounded'
-          src="https://stmaaprodfwsite.blob.core.windows.net/assets/sites/1/2021/10/05102021-maize-for-feed-harvest-c-tim-scrivener.jpg"
+          src="https://media.healthyfood.com/wp-content/uploads/2021/08/50-easy-ways-to-eat-more-fruit-and-veg-iStock-1225383160-1024x838.jpg"
           alt="Image Not Found"
         />
         <Carousel.Caption>
-          <h3>Harvesting</h3>
+          <h3></h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className='d-block m-auto rounded'
-          src="https://img.freepik.com/premium-photo/young-bearded-courier-red-t-shirt-cap-is-holding-two-heavy-bags-food-home-delivery-food_497171-362.jpg"
+          src="https://s1.1zoom.me/b3137/840/Meat_products_Cheese_Milk_Vegetables_Wood_planks_513139_3840x2160.jpg"
           alt="Image Not Found"
         />
         <Carousel.Caption>
-          <h3>To Customer's Basket</h3>
+          <h3></h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
