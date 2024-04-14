@@ -2,7 +2,6 @@
   "name": "project",
   "version": 1,
   "private": true,
-  "main": "server.js",
   "dependencies": {
     "@stripe/stripe-js": "^2.2.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -35,7 +34,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-    
+    "build": "webpack"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +55,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   }
 }
