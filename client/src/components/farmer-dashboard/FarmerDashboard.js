@@ -396,6 +396,7 @@ function FarmerDashboard(){
                       <option value=''>---Select Measurement---</option>
                       <option value="grams">grams</option>
                       <option value="Kgs">kilograms</option>
+                      <option value="Kgs">Liters</option>
                       <option value="dozens">dozens</option>
                       <option value="units">units</option>
                   </select>
