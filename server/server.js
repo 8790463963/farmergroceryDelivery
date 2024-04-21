@@ -35,10 +35,10 @@ app.use("/farmers-api",farmersApp)
 //Execute when the path is customers-api
 app.use("/customers-api",customersApp)
 //Page Refresh Middleware
-const pageRefreshMiddleware=(req,res,next)=>{
-    res.sendFile(path.join(__dirname,'./build/index.html'))
-}
-app.use('*',pageRefreshMiddleware)
+// const pageRefreshMiddleware=(req,res,next)=>{
+//     res.sendFile(path.join(__dirname,'./build/index.html'))
+// }
+// app.use('*',pageRefreshMiddleware)
 //Invalid Path Middleware
 const invalidPathMiddleware=(req,res,next)=>{
     res.send({message:`Invalid Path`})
