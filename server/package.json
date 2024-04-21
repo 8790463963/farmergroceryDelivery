@@ -1,7 +1,5 @@
 {
   "name": "project",
-  "version": 1,
-  "private": true,
   "dependencies": {
     "@stripe/stripe-js": "^2.2.0",
     "@testing-library/jest-dom": "^5.16.5",
