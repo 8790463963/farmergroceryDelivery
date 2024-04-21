@@ -50,7 +50,7 @@ function SignUp() {
         let formData=new FormData()
         formData.append("User",JSON.stringify(userObj))//object parsed to string
         formData.append('Photo',selectedFile)//binary large object(blob)
-        await axios.post(`http://localhost:3500/${userObj.Type}s-api/sign-up`,formData)
+        await axios.post(`https://farmergrocerydelivery.onrender.com//${userObj.Type}s-api/sign-up`,formData)
         .then(responseObj=>{
           setIsLoading(false)
             if(responseObj.status===201){

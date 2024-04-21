@@ -156,7 +156,7 @@ function CustomerDashboard(){
         return
     else{
       setIsLoading(true)
-      axios.put(`http://localhost:3500/customers-api/update-profile/${currentUser.Username}`,modifiedCustomer)
+      axios.put(`https://farmergrocerydelivery.onrender.com//customers-api/update-profile/${currentUser.Username}`,modifiedCustomer)
       .then(responseObj=>{
         setIsLoading(false)
         if(responseObj.data.message==='Profile updated'){
@@ -178,7 +178,7 @@ function CustomerDashboard(){
   let onFileSelect=(eventObj)=>{
     let formData=new FormData()
     formData.append('Updated-Customer-Photo',eventObj.target.files[0])
-    axios.put(`http://localhost:3500/customers-api/update-profile-image/${currentUser.Username}`,formData)
+    axios.put(`https://farmergrocerydelivery.onrender.com//customers-api/update-profile-image/${currentUser.Username}`,formData)
     .then(responseObj=>{
       if(responseObj.data.message==='Profile image updated successfully'){
         toast.success(responseObj.data.message, toastConfig)

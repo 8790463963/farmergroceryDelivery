@@ -42,7 +42,7 @@ function Store() {
   }
   useEffect(()=>{
     if(userLogInStatus===true){
-      axios.get(`http://localhost:3500/farmers-api/get-products/${currentUser.Username}`)
+      axios.get(`https://farmergrocerydelivery.onrender.com//farmers-api/get-products/${currentUser.Username}`)
       .then(response=>{
         if(response.status===201){
           setProducts(response.data.message)
@@ -63,7 +63,7 @@ function Store() {
   }
   let deleteProduct=(productKey)=>{
     if(window.confirm("Are you sure about to delete this Product")){
-      axios.delete(`http://localhost:3500/farmers-api/delete-product/resource?username=${currentUser.Username}&key=${productKey}`)
+      axios.delete(`https://farmergrocerydelivery.onrender.com//farmers-api/delete-product/resource?username=${currentUser.Username}&key=${productKey}`)
       .then(responseObj=>{
         setExecuteGetProducts(!executeGetProducts)
         if(responseObj.data.message==='Product deleted'){
@@ -109,7 +109,7 @@ function Store() {
       return
     }
     else if(userLogInStatus===true){
-      await axios.put(`http://localhost:3500/farmers-api/edit-product/${currentUser.Username}`,modifiedProductObj)
+      await axios.put(`https://farmergrocerydelivery.onrender.com//farmers-api/edit-product/${currentUser.Username}`,modifiedProductObj)
       .then(responseObj=>{
         setIsLoading(false)
         setExecuteGetProducts(!executeGetProducts)

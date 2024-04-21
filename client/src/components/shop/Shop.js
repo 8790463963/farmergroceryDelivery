@@ -70,7 +70,7 @@ function Shop() {
   }
   useEffect(()=>{
     if(userLogInStatus===true){
-      axios.get(`http://localhost:3500/farmers-api/get-all-products`)
+      axios.get(`https://farmergrocerydelivery.onrender.com//farmers-api/get-all-products`)
         .then(response=>{
             if(response.status===201){
                 setAllProducts(response.data.message)
@@ -102,7 +102,7 @@ function Shop() {
         //Enforce timestamp as unique key to each address object
         let key=Date.now().toString()
         address.Key=key
-        axios.put(`http://localhost:3500/customers-api/modify-address/${currentUser.Username}`,address)
+        axios.put(`https://farmergrocerydelivery.onrender.com//customers-api/modify-address/${currentUser.Username}`,address)
         .then(responseObj=>{
           if(responseObj.data.message==='Address updation successfull'){
             toast.info(responseObj.data.message, toastConfig)
@@ -120,7 +120,7 @@ function Shop() {
       curProduct.Status="Ordered"
       curAddress.Username=currentUser.Username
       let orderData=[curProductOwner,curProduct,stockCount,curAddress]
-      axios.put(`http://localhost:3500/farmers-api/order-product/${currentUser.Username}`,orderData)
+      axios.put(`https://farmergrocerydelivery.onrender.com//farmers-api/order-product/${currentUser.Username}`,orderData)
       .then(response=>{
         setIsLoading(false)
         if(response.data.message==='Order placed successfully')

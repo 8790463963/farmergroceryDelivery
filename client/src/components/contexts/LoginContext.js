@@ -7,7 +7,7 @@ function LoginContext({children}){
     let [logInError,setLoginError]=useState("")
     let [userLogInStatus,setUserLogInStatus]=useState(false)
     let logInUser=async(userCredentialsObj)=>{
-        await axios.post(`http://localhost:3500/${userCredentialsObj.Type}s-api/login`,userCredentialsObj)
+        await axios.post(`https://farmergrocerydelivery.onrender.com//${userCredentialsObj.Type}s-api/login`,userCredentialsObj)
         .then(res=>{
             if(res.data.message==='Login Success'){
                 setCurrentUser({...res.data.user})
