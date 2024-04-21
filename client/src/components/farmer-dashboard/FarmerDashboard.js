@@ -184,7 +184,7 @@ function FarmerDashboard(){
       return
     else{
       setIsLoading(true)
-      axios.put(`https://farmergrocerydelivery.onrender.com//farmers-api/update-profile/${currentUser.Username}`,modifiedFarmer)
+      axios.put(`https://farmergrocerydelivery.onrender.com/farmers-api/update-profile/${currentUser.Username}`,modifiedFarmer)
       .then(responseObj=>{
         setIsLoading(false)
         if(responseObj.data.message==='Profile updated'){
@@ -205,7 +205,7 @@ function FarmerDashboard(){
   let onFileSelect=(eventObj)=>{
     let formData=new FormData()
     formData.append('Updated-Farmer-Photo',eventObj.target.files[0])
-    axios.put(`https://farmergrocerydelivery.onrender.com//farmers-api/update-profile-image/${currentUser.Username}`,formData)
+    axios.put(`https://farmergrocerydelivery.onrender.com/farmers-api/update-profile-image/${currentUser.Username}`,formData)
     .then(responseObj=>{
       if(responseObj.data.message==='Profile image updated successfully'){
         toast.success(responseObj.data.message, toastConfig)
@@ -234,7 +234,7 @@ function FarmerDashboard(){
       setError("Images",{message:'* File limit exceeded',type:'required'})
     else if(useAddProductForm===true){
       setIsLoading(true)
-      axios.put(`https://farmergrocerydelivery.onrender.com//farmers-api/add-product/${currentUser.Username}`,formData)
+      axios.put(`https://farmergrocerydelivery.onrender.com/farmers-api/add-product/${currentUser.Username}`,formData)
       .then(responseObj=>{
         setIsLoading(false)
         if(responseObj.data.message==='Product added'){

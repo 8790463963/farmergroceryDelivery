@@ -31,7 +31,7 @@ function Order(){
       toast.error('Oops!!! Something Went Wrong', toastConfig);
   }
   useEffect(()=>{
-    axios.get(`https://farmergrocerydelivery.onrender.com//customers-api/get-orders/${currentUser.Username}`)
+    axios.get(`https://farmergrocerydelivery.onrender.com/customers-api/get-orders/${currentUser.Username}`)
     .then(response=>{
         if(response.status===201)
           setCurOrders(response.data.message)  
@@ -42,7 +42,7 @@ function Order(){
   },[executeOrder])
   let cancelOrder=(orderKey,orderOwner,addressKey)=>{
     if(window.confirm("Are you sure about to cancel your order")){
-      axios.put(`https://farmergrocerydelivery.onrender.com//customers-api/cancel-order/${currentUser.Username}`,{orderKey,orderOwner,addressKey})
+      axios.put(`https://farmergrocerydelivery.onrender.com/customers-api/cancel-order/${currentUser.Username}`,{orderKey,orderOwner,addressKey})
       .then(response=>{
         if(response.status===201){
           toast.success(response.data.message,toastConfig)

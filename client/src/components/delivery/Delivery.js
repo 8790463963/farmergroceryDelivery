@@ -42,7 +42,7 @@ function Delivery(){
       toast.error('Oops!!! Something Went Wrong', toastConfig);
   }
   useEffect(()=>{
-    axios.get(`https://farmergrocerydelivery.onrender.com//farmers-api/get-deliveries/${currentUser.Username}`)
+    axios.get(`https://farmergrocerydelivery.onrender.com/farmers-api/get-deliveries/${currentUser.Username}`)
     .then(response=>{
         if(response.status===201)
           setCurDeliveries(response.data.message)  
@@ -65,7 +65,7 @@ function Delivery(){
   }
   let saveDeliveryStatus=(deliveryStatusObj)=>{  
     if(isDelivery)
-      axios.put(`https://farmergrocerydelivery.onrender.com//farmers-api/update-delivery-status/${currentUser.Username}`,deliveryStatusObj)
+      axios.put(`https://farmergrocerydelivery.onrender.com/farmers-api/update-delivery-status/${currentUser.Username}`,deliveryStatusObj)
       .then(response=>{
           if(response.status===201){
             toast.info(response.data.message,toastConfig)
