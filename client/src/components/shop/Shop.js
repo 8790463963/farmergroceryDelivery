@@ -141,7 +141,7 @@ function Shop() {
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-6" style={{marginLeft:'-7.5px',marginRight:'-80px'}}>
           {
             allProducts?.map((farmer,id)=> 
-              Object.values(farmer.Products).map((product,key)=> 
+              farmer.Products && Object.values(farmer.Products).map((product,key)=> 
                 <div className="col" key={id} onMouseEnter={()=>setCurProductOwner(farmer.Username)}>
                   <div className="card mb-5 shopCard" style={{maxWidth:'300px'}} key={key} onMouseEnter={()=>{setCurProduct(product);setStockCount(1)}}>
                     <Carousel indicators={false}>      
